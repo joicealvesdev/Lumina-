@@ -48,7 +48,7 @@ button {
 	border: 1px solid rgba(75, 72, 93, 0.16);
 	border-radius: 50%;
 	box-shadow: 0 5px 18px rgba(50, 49, 58, 0.1);
-	opacity: 0;
+	opacity: 0.82;
 	transition: opacity 0.2s, background 0.2s, transform 0.2s;
 }
 

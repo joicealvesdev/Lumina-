@@ -81,7 +81,7 @@ function App() {
         title={darkTheme ? "Ativar tema claro" : "Ativar tema escuro"}
         onClick={() => setDarkTheme((current) => !current)}
       >
-        {darkTheme ? "☀" : "◐"}
+        {darkTheme ? "☀" : "☾"}
       </button>
       <section className="signup-card" aria-label="Cadastro na Lumina">
         <aside className="visual-panel">

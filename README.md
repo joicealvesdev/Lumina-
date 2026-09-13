@@ -1,6 +1,8 @@
 # Lumina
 
 Tela de cadastro responsiva desenvolvida com React, TypeScript e Vite.
+<img width="1917" height="908" alt="{9CB6805F-E6B3-4237-9784-420113EF1085}" src="https://github.com/user-attachments/assets/6e9beec8-2d9a-4437-9df3-b4f19d8ecb7d" />
+
 
 ## Sobre o projeto
 

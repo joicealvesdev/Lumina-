@@ -8,10 +8,13 @@ type FormData = {
   phone: string;
   password: string;
   confirmPassword: string;
-  gender: string;
+  gender: Gender;
 };
 
+type Gender = "" | "Feminino" | "Masculino" | "Outro" | "Prefiro não dizer";
 type FormErrors = Partial<Record<keyof FormData, string>>;
+
+const genderOptions: Gender[] = ["Feminino", "Masculino", "Outro", "Prefiro não dizer"];
 
 const initialForm: FormData = {
   firstName: "",
@@ -31,13 +34,13 @@ function App() {
   const [successMessage, setSuccessMessage] = useState("");
   const [notice, setNotice] = useState("");
 
-  function updateField(field: keyof FormData, value: string) {
+  function updateField(field: keyof FormData, value: string): void {
     setForm((current) => ({ ...current, [field]: value }));
     setErrors((current) => ({ ...current, [field]: undefined }));
     setSuccessMessage("");
   }
 
-  function validate() {
+  function validate(): FormErrors {
     const nextErrors: FormErrors = {};
     if (!form.firstName.trim()) nextErrors.firstName = "Digite seu primeiro nome.";
     if (!form.lastName.trim()) nextErrors.lastName = "Digite seu sobrenome.";
@@ -111,9 +114,9 @@ function App() {
             <fieldset className="gender-field">
               <legend>Gênero <span>(opcional)</span></legend>
               <div className="radio-options">
-                {["Feminino", "Masculino", "Outro", "Prefiro não dizer"].map((option) => (
+                {genderOptions.map((option) => (
                   <label key={option} className="radio-option">
-                    <input type="radio" name="gender" value={option} checked={form.gender === option} onChange={(event) => updateField("gender", event.target.value)} />
+                    <input type="radio" name="gender" value={option} checked={form.gender === option} onChange={() => updateField("gender", option)} />
                     <span>{option}</span>
                   </label>
                 ))}

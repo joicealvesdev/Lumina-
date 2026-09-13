@@ -33,6 +33,7 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [notice, setNotice] = useState("");
+  const [darkTheme, setDarkTheme] = useState(false);
 
   function updateField(field: keyof FormData, value: string): void {
     setForm((current) => ({ ...current, [field]: value }));
@@ -72,7 +73,16 @@ function App() {
   }
 
   return (
-    <main className="page-shell">
+    <main className={`page-shell${darkTheme ? " dark-theme" : ""}`}>
+      <button
+        className="theme-toggle"
+        type="button"
+        aria-label={darkTheme ? "Ativar tema claro" : "Ativar tema escuro"}
+        title={darkTheme ? "Ativar tema claro" : "Ativar tema escuro"}
+        onClick={() => setDarkTheme((current) => !current)}
+      >
+        {darkTheme ? "☀" : "◐"}
+      </button>
       <section className="signup-card" aria-label="Cadastro na Lumina">
         <aside className="visual-panel">
           <div className="brand-mark" aria-label="Lumina">lumina<span>.</span></div>

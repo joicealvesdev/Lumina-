@@ -1,125 +1,94 @@
-📋 Projeto – Tela de Cadastro (Sign Up)
+# Lumina
 
-Este projeto consiste no desenvolvimento de uma interface de cadastro de usuários, criada com foco em experiência do usuário (UI/UX), boas práticas de desenvolvimento front-end e escalabilidade para aplicações comerciais.
+Tela de cadastro responsiva desenvolvida com React, TypeScript e Vite.
 
-A aplicação foi desenvolvida tanto para fins de estudo e aprendizado contínuo, quanto para servir como base reutilizável em projetos reais, comerciais ou profissionais.
+## Sobre o projeto
 
-🎯 Objetivos do Projeto
+O Lumina é uma interface de criação de conta com duas áreas principais: uma ilustração acompanhada de uma breve apresentação visual e um formulário de cadastro.
 
-Praticar e consolidar conceitos de desenvolvimento front-end
+O projeto começou como um exercício de front-end e foi aprimorado com uma estrutura mais atual, mantendo a ideia e a identidade visual originais. A interface foi pensada para funcionar em telas grandes, tablets e celulares sem depender de bibliotecas de componentes.
 
-Criar uma interface moderna, limpa e intuitiva
+## Funcionalidades
 
-Aplicar boas práticas de organização e padronização de código
+O formulário possui:
 
-Desenvolver um projeto que possa ser:
+- Campo de nome e sobrenome.
+- E-mail com mensagens específicas para ausência de `@` ou `.com`.
+- Celular obrigatório, aceitando somente números.
+- Senha e confirmação de senha.
+- Controle para mostrar ou ocultar a senha.
+- Seleção opcional de gênero.
+- Mensagens de erro acessíveis e feedback de sucesso.
+- Estado de carregamento durante o envio.
 
-Evoluído futuramente
+As validações acontecem no navegador. O cadastro é apenas uma simulação neste momento: os dados não são armazenados e não são enviados para uma API.
 
-Integrado a back-ends e APIs
+## Tecnologias
 
-Utilizado como base para aplicações comerciais
+- React para a interface e o comportamento da tela.
+- TypeScript para tipagem dos dados e estados do formulário.
+- Vite para desenvolvimento e build da aplicação.
+- HTML semântico para estruturar o formulário.
+- CSS para o visual, estados de interação e responsividade.
 
-🖥️ Visão Geral da Interface
+As dependências foram mantidas no mínimo necessário para o funcionamento do projeto.
 
-A tela de cadastro contém:
+## Requisitos
 
-Campos de:
+- Node.js 18 ou superior.
+- npm.
 
-Primeiro nome
+## Como executar
 
-Sobrenome
+Instale as dependências do projeto:
 
-E-mail
+```bash
+npm install
+```
 
-Celular
+Inicie o servidor de desenvolvimento:
 
-Senha
+```bash
+npm run dev
+```
 
-Confirmação de senha
+O Vite exibirá no terminal o endereço local da aplicação, normalmente `http://localhost:5173`.
 
-Seleção de gênero:
+Para verificar a compilação e gerar os arquivos de produção:
 
-Feminino
+```bash
+npm run build
+```
 
-Masculino
+Para visualizar o build localmente:
 
-Outros
+```bash
+npm run preview
+```
 
-Prefiro não dizer
+## Estrutura do projeto
 
-Botão de ação “Continuar”
+```text
+src/
+	App.tsx        # Tela e lógica do formulário
+	main.tsx       # Entrada da aplicação React
+	styles.css     # Estilos e regras responsivas
+	vite-env.d.ts  # Tipos dos assets usados pelo Vite
 
-Link para usuários já cadastrados (Entrar)
+imagens/
+	*.jpg          # Ilustração da área visual
 
-Layout responsivo e visual moderno
+index.html       # Documento HTML principal
+package.json     # Scripts e dependências
+vite.config.ts   # Configuração do Vite
+```
 
-🤖 Tecnologias Utilizadas
+## Próximos passos
 
-HTML5
+O próximo avanço natural é conectar o formulário a um back-end. A partir disso, o projeto poderá receber autenticação, persistência dos usuários, uma tela de login real e testes automatizados.
 
-CSS3
+## Licença
 
-JavaScript
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
 
-📚 Aprendizados Aplicados
-
-Estruturação semântica de formulários
-
-Design responsivo
-
-Organização visual e hierarquia da informação
-
-Criação de interfaces focadas no usuário
-
-Padronização de componentes reutilizáveis
-
-Preparação de layout para integração com back-end
-
-🚀 Possíveis Evoluções Futuras
-
-Este projeto foi pensado para ser facilmente expandido, podendo receber:
-
-Validações de formulário (front-end e back-end)
-
-Integração com APIs REST
-
-Sistema de autenticação
-
-Armazenamento em banco de dados
-
-Feedback visual de erros e sucesso
-
-Versão mobile aprimorada
-
-Acessibilidade (WCAG)
-
-👩🏻‍💻 Uso Comercial e Educacional
-
-Este projeto foi desenvolvido com os seguintes propósitos:
-
-📖 Estudo e aprendizado contínuo
-
-💼 Portfólio profissional
-
-🧱 Base para projetos futuros
-
-🛍️ Uso comercial, podendo ser adaptado conforme a necessidade do cliente ou produto
-
-Sinta-se à vontade para:
-
-Clonar
-
-Adaptar
-
-Evoluir
-
-Integrar em outros projetos
-
-📄 Licença
-
-Este projeto está sob a licença MIT, permitindo uso, modificação e distribuição, inclusive para fins comerciais.
-
-👩🏻‍💻 Autor
-
-Desenvolvido por **Joice Alves**
+Desenvolvido por **Joice Alves**.
